@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Flash Cards</title>
+</head>
+
+<body class="bg-slate-200 pb-20">
+
+    <!--OVERLAY SCREEN-->
+    <!--*************-->
+    <div class="hidden overlay-screen">
+
+        <!--EDIT TEXT-->
+        <div class="edit-text bg-white">
+            <input title="Heading" type="text" class="edit-heading" placeholder="Heading">
+            <textarea title="Content" class="edit-content" placeholder="Content"></textarea>
+            <div class="flex">
+                <textarea title="color-index" class="color-index hidden">0</textarea>
+                <div class="color-options">
+                    <button title="color1" type="button" class="color-selector bg-black"
+                        onclick=update_color(0)></button>
+                    <button title="color1" type="button" class="color-selector bg-lime-500"
+                        onclick=update_color(1)></button>
+                    <button title="color2" type="button" class="color-selector bg-cyan-200"
+                        onclick=update_color(2)></button>
+                    <button title="color3" type="button" class="color-selector bg-violet-300"
+                        onclick=update_color(3)></button>
+                    <button title="color4" type="button" class="color-selector bg-rose-300"
+                        onclick=update_color(4)></button>
+                    <button title="color5" type="button" class="color-selector bg-amber-200"
+                        onclick=update_color(5)></button>
+                </div>
+            </div>
+        </div>
+
+        <!--EDIT MENU-->
+        <div class="edit-menu">
+            <img class="icon option" src="./images/done.svg" alt="">
+            <img class="icon option" src="./images/delete.svg" alt="">
+            <img class="icon option" src="./images/close.svg" alt="">
+        </div>
+    </div>
+
+    <!--CARDS-SECTION-->
+    <!--*************-->
+    <div class="cards-section">
+
+        <!-- LOGO CARD -->
+        <div class="logo-card">
+            <div class="logo-icon">
+                <h1 class="logo-text">Flash<br>Cards</h1>
+            </div>
+        </div>
+
+        <!--SEARCH CARD-->
+        <div class="search-card">
+            <input title="edit-search" type="text" class="edit-search bg-white" placeholder="search" onkeyup=search()>
+            <div class="search-color">
+                <button title="color1" type="button" class="color-filter bg-black" onclick=filter(0)></button>
+                <button title="color1" type="button" class="color-filter bg-lime-500" onclick=filter(1)></button>
+                <button title="color2" type="button" class="color-filter bg-cyan-200" onclick=filter(2)></button>
+                <button title="color3" type="button" class="color-filter bg-violet-300" onclick=filter(3)></button>
+                <button title="color4" type="button" class="color-filter bg-rose-300" onclick=filter(4)></button>
+                <button title="color5" type="button" class="color-filter bg-amber-200" onclick=filter(5)></button>
+            </div>
+        </div>
+
+        <!--ADD CARD-->
+        <div class="add-card">
+            <div class="main-icon">
+                <img src="./images/plus.svg" class="icon" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
